@@ -74,5 +74,5 @@ then
 	else
 		echo "$PKG found, skipping download"
 	fi
-	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../$NAME_$VER.orig.tar.bz2
+	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../$NAME\_$VER.orig.tar.bz2
 fi
