@@ -6,8 +6,10 @@
 # 2015 Filip Danilovic <filip@openmailbox.org>
 
 
-# Set the package name:
-PKG=xfce4-dev-tools-4.12.0.tar.bz2
+# Set the package version and name:
+NAME=xfce4-dev-tools
+VER=4.12.0
+PKG=$NAME-$VER.tar.bz2
 
 
 # Set the directory in which to download/extract
@@ -72,5 +74,5 @@ then
 	else
 		echo "$PKG found, skipping download"
 	fi
-	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../
+	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../$NAME_$VER.orig.tar.bz2
 fi
