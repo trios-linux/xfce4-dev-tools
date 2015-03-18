@@ -64,7 +64,8 @@ then
 fi
 
 
-# If arguments are "-x" & "-m", download, extract and move package.
+# If arguments are "-x" & "-m", download, extract and move package. Also remove self & Readme.md.
+# This is what we use for Jenkins build.
 
 if [ "$1" = "-x" ] && [ "$2" = "-m" ];
 then
@@ -74,5 +75,5 @@ then
 	else
 		echo "$PKG found, skipping download"
 	fi
-	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../$NAME\_$VER.orig.tar.bz2
+	tar xvjf $PKG --strip 1 && mv -f -v $PKG ../$NAME\_$VER.orig.tar.bz2 && rm -f ./README.md && rm -f --@0
 fi
